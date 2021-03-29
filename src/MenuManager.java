@@ -15,34 +15,48 @@ public class MenuManager {
 			System.out.println("6. Exit");
 			System.out.print("Select one number between 1-6 :");
 			num = input. nextInt();
-			
-			switch (num) {
-			
-			case 1:
-				System.out.print("과목명 : ");
-				String subjectname = input.next();
-				System.out.print("분반 : ");
-				int subjectclass = input.nextInt();
-				break;
-			case 2:
-				System.out.print("과목명 : ");
-				String subjectname2 = input.next();
-				break;
-			case 3:
-				System.out.print("과목명 : ");
-				String subjectname3 = input.next();
-				break;
-			case 4:
-				System.out.print("과목명 : ");
-				String subjectname4 = input.next();
-				break;
-			case 5:
-				break;
-
+			if (num == 1) {
+				addSubject();
+			}
+			else if (num == 2) {
+				deleteSubject();
+			}
+			else if (num == 3) {
+				editSubject();
+			}
+			else if (num == 4) {
+				viewSubject();
+			}
+			else {
+				continue;
 			}
 		}
 		
 
 	}
-
+	public static void addSubject() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("과목: ");
+		String subjectName = input.next();
+		System.out.print("교수: ");
+		String professor = input.next();
+		System.out.print("분반: ");
+		int subjectClass = input.nextInt();
+	}
+	public static void deleteSubject() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("과목: ");
+		String subjectName = input.next();
+		
+	}
+	public static void editSubject() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("과목: ");
+		String subjectName = input.next();
+	}
+	public static void viewSubject() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("과목: ");
+		String subjectName = input.next();
+	}
 }
